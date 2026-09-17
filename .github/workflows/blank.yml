@@ -1,8 +1,9 @@
 name: job
-on: workflow_dispatch
+on: push
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo "hello world"
+build:
+runs-on: ubuntu-latest
+steps:
+- run: echo "Hello Thulasi"
+- run: echo "Hello mommy"
     
