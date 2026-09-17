@@ -5,4 +5,4 @@ build:
 runs-on: ubuntu-latest
 steps:
 - run: echo "Hello Thulasi"
--run: echo "Hello mommy"
+- run: echo "Hello mommy"
