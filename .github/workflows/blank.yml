@@ -1,11 +1,19 @@
-name: pp
-on:
-  push:
-    branches:
-      - main
+Name: jj
+on: workflow-dispatch
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "hi"
+build:
+runs-on: ubuntu-latest
+steps:
+- run: echo "hi"
+test
+needs: build
+runs-on: ubuntu-latest
+steps:
+- run: echo "test"
+deploy
+needs: test
+runs-on: ubuntu-latest
+steps:
+- run: echo "deployed" 
+
     
