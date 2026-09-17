@@ -1,10 +1,10 @@
 name: pp
 on: 
-push:
-braches: 
-- main
-jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- run: echo "hi"
+ push:
+ braches: 
+    - main
+   jobs:
+    build:
+     runs-on: ubuntu-latest
+      steps:
+      - run: echo "hi"
