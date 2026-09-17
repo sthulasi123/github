@@ -1,0 +1,7 @@
+Name: jobs
+on: workflow-dispatch
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- run: echo "hi"
