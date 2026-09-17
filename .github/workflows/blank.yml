@@ -1,19 +1,27 @@
-Name: jj
-on: workflow-dispatch
-jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- run: echo "hi"
-test
-needs: build
-runs-on: ubuntu-latest
-steps:
-- run: echo "test"
-deploy
-needs: test
-runs-on: ubuntu-latest
-steps:
-- run: echo "deployed" 
+name: jj
 
-    
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build step
+        run: echo "hi"
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test step
+        run: echo "test"
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy step
+        run: echo "deployed"
+
+
